@@ -27,7 +27,7 @@ const navLinks = [
     },
     {
         label: "Logout",
-        href: "/logout",
+        href: "/",
         getIcon: (active) =>
             active ? <RiLogoutCircleFill /> : <RiLogoutCircleLine />,
     },
