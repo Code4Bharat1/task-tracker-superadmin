@@ -6,13 +6,13 @@ import { Search, Filter, RefreshCcw, User, Calendar, Building } from "lucide-rea
 const STATUS_MAP = {
   Approved: "Active",
   Pending: "Pending",
-  Rejected: "Suspended"
+  Rejected: "Rejected"
 };
 
 const REVERSE_STATUS_MAP = {
   Active: "Approved",
   Pending: "Pending",
-  Suspended: "Rejected"
+  Rejected: "Rejected"
 };
 
 export default function ClientDetails() {
