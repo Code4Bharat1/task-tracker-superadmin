@@ -13,7 +13,7 @@ export default function LoginPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // TODO: Authenticate here
-        router.push("/dashboard");
+        // router.push("/dashboard");
     };
 
     const togglePasswordVisibility = () => {

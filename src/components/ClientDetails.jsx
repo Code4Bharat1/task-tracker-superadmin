@@ -30,9 +30,7 @@ export default function ClientDetails() {
       const backendStatus = STATUS_MAP[statusLabel];
       const response = await axios.get(
         `${process.env.NEXT_PUBLIC_BACKEND_API}/companyRegister/status`,
-        {
-          withCredentials: true
-        },
+
         { params: { status: backendStatus } }
       );
 
@@ -57,10 +55,13 @@ export default function ClientDetails() {
         `${process.env.NEXT_PUBLIC_BACKEND_API}/companyRegister/updateStatus/${id}`,
         { status: newStatus },
         {
-          headers: { "Content-Type": "application/json" },
-          withCredentials: true
+          headers: {
+            "Content-Type": "application/json"
+          },
+          withCredentials: true, // 🔒 ensures cookies (e.g., auth tokens) are sent
         }
       );
+
 
       // Refresh the client list
       fetchClients(activeTab);
